@@ -6,7 +6,6 @@ import lejos.nxt.Button;
 public class RoboRace     
 {
     public static void main (String[] args) throws Exception
- 
     {
     	Thread.sleep(5000); //5 Second Delay
     	
@@ -61,7 +60,6 @@ public class RoboRace
     	
     	do{
     		if(light1.getLightValue() >= 32 && light1.getLightValue() <= 44 && light2.getLightValue() >= 32 && light2.getLightValue() <= 44)
-    	
     		{	
     		
     						
@@ -74,7 +72,6 @@ public class RoboRace
     		}
     	
     		else if (light1.getLightValue() >= 18 && light1.getLightValue() <= 29 && light2.getLightValue() >= 32 && light2.getLightValue() <= 44)
-    	
     		{
     		
     			Motor.A.setSpeed(500);
@@ -104,7 +101,6 @@ public class RoboRace
     		}
     	
     		else if (light1.getLightValue() >= 18 && light1.getLightValue() <= 29 && light2.getLightValue() >= 18 && light2.getLightValue() <= 29)
-    		
     		{
     			Motor.A.setSpeed(500);
     			Motor.B.setSpeed(500);
@@ -117,14 +113,13 @@ public class RoboRace
     		}
     		
     		else if (light1.getLightValue() >= 45 && light1.getLightValue() <= 51 && light2.getLightValue() >= 45 && light2.getLightValue() <= 51)
-    		
     		{
     			Thread.sleep(750);
     			Motor.A.stop();
     			Motor.B.stop();
     			
     		}
-    	} while (!Button.ESCAPE.isDown() || light1.getLightValue() >= 45 && light1.getLightValue() <= 51 && light2.getLightValue() >= 45 && light2.getLightValue() <= 51);
+    	}   while (!Button.ESCAPE.isDown() || light1.getLightValue() >= 45 && light1.getLightValue() <= 51 && light2.getLightValue() >= 45 && light2.getLightValue() <= 51);
     }
     
 }
